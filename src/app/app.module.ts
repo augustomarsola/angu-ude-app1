@@ -6,18 +6,22 @@ import { TopoComponent } from "./topo/topo.component";
 import { PainelComponent } from './painel/painel.component';
 import { TentativasComponent } from './tentativas/tentativas.component';
 import { ProgressoComponent } from './progresso/progresso.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
-    declarations: [
-      AppComponent,
-      TopoComponent,
-      PainelComponent,
-      TentativasComponent,
-      ProgressoComponent
-    ],
+  declarations: [
+    AppComponent,
+    TopoComponent,
+    PainelComponent,
+    TentativasComponent,
+    ProgressoComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
