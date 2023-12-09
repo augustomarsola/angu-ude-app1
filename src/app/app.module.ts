@@ -9,6 +9,7 @@ import { ProgressoComponent } from './progresso/progresso.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MatInputModule } from '@angular/material/input';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
