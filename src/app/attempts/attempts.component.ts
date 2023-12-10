@@ -11,12 +11,6 @@ export class AttemptsComponent implements OnChanges {
 
   @Input() attempts: number = 3;
 
-  // public hearts: Heart[] = [
-  //   new Heart(true),
-  //   new Heart(true),
-  //   new Heart(true),
-  // ];
-
   public hearts: Heart[] = Array.from({ length: this.attempts }, () => new Heart(true));
 
   public ngOnChanges(): void {

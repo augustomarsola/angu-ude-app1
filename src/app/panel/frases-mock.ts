@@ -11,7 +11,7 @@ export const PHRASES: Phrase[] = [
   },
   {
     phraseEn: 'How are you?',
-    phrasePt: 'Como vai você?'
+    phrasePt: 'Como vai você?'
   },
   {
     phraseEn: 'I like pizza',

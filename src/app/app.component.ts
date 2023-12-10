@@ -5,5 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  title = 'angu-ude-app1';
+  public gameOver(event: string): void {
+    console.log(event);
+  }
 }

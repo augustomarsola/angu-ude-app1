@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Phrase } from '../shared/phrase.model';
 import { PHRASES } from './frases-mock';
 
@@ -18,6 +18,8 @@ export class PanelComponent {
 
   public attempts: number = 3;
 
+  @Output() public gameOver: EventEmitter<string> = new EventEmitter();
+
   constructor() {
     this.phraseRound = this.phrases[this.round];
   }
@@ -28,13 +30,15 @@ export class PanelComponent {
 
   public checkAnswer(): void {
     if (this.answer === this.phraseRound.phrasePt) {
-      alert('Acertou!');
-      this.updateRound();
+      if (this.round < this.phrases.length - 1) {
+        this.updateRound();
+      } else {
+        this.gameOver.emit('won');
+      }
     } else {
-      alert('Errou!');
       this.attempts--;
       if (this.attempts === -1) {
-        alert('Suas vidas acabaram');
+        this.gameOver.emit('lost');
       }
     }
   }
