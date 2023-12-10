@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Phrase } from '../shared/phrase.model';
 import { PHRASES } from './frases-mock';
+import { GameResult } from '../shared/gameResult.model';
 
 @Component({
   selector: 'app-painel',
@@ -18,7 +19,7 @@ export class PanelComponent {
 
   public attempts: number = 3;
 
-  @Output() public gameOver: EventEmitter<string> = new EventEmitter();
+  @Output() public gameOver: EventEmitter<GameResult> = new EventEmitter();
 
   constructor() {
     this.phraseRound = this.phrases[this.round];

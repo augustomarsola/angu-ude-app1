@@ -1,2 +1,10 @@
 <app-topo />
-<app-painel (gameOver)="gameOver($event)" />
+<app-painel (gameOver)="gameOver($event)" *ngIf="gameInProgress; else gameIsOver" />
+<ng-template #gameIsOver>
+  <div class="p-16 text-center" *ngIf="gameResult === 'won'">
+    <h1 class="text-3xl text-green-700 uppercase">Você ganhou! 😁</h1>
+  </div>
+  <div class="p-16 text-center" *ngIf="gameResult === 'lost'">
+    <h1 class="text-3xl text-red-700 uppercase">Você perdeu! 😢</h1>
+  </div>
+</ng-template>
