@@ -5,6 +5,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './progress.component.html',
 })
 export class ProgressComponent {
-  @Input()
-  public progress: number = 0;
+  @Input() public progress: number = 0;
 }

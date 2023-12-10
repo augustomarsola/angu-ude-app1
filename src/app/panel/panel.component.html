@@ -1,7 +1,7 @@
 <main class="bg-gray-200 m-6 p-8 rounded">
   <div class="flex flex-col md:flex-row gap-8 mb-4 items-center">
     <app-progresso [progress]="progress" class="grow w-full" />
-    <app-tentativas class="grow" />
+    <app-tentativas [attempts]="attempts" class="grow" />
   </div>
   <div>
     <h6 class="font-medium mb-2">{{ instruction }}</h6>

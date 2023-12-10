@@ -5,5 +5,7 @@ export class Heart {
     public emptyHeart: string = '../assets/empty-heart.svg'
   ) {}
 
-  public showHeart: string = this.isFull ? this.fullHeart : this.emptyHeart;
+  public showHeart(): string {
+    return this.isFull ? this.fullHeart : this.emptyHeart;
+  };
 }

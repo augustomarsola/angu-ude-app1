@@ -16,6 +16,8 @@ export class PanelComponent {
 
   public progress: number = 0;
 
+  public attempts: number = 3;
+
   constructor() {
     this.phraseRound = this.phrases[this.round];
   }
@@ -30,6 +32,10 @@ export class PanelComponent {
       this.updateRound();
     } else {
       alert('Errou!');
+      this.attempts--;
+      if (this.attempts === -1) {
+        alert('Suas vidas acabaram');
+      }
     }
   }
 
