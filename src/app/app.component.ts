@@ -13,4 +13,9 @@ export class AppComponent {
     this.gameInProgress = false;
     this.gameResult = event;
   }
+
+  public resetGame(): void {
+    this.gameInProgress = true;
+    this.gameResult = '';
+  }
 }
