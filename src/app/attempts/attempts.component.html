@@ -1,5 +1,3 @@
 <div class="flex gap-1 justify-end">
-  <img [src]="emptyHeart" alt="Coração vazio">
-  <img [src]="fullHeart" alt="Coração vazio">
-  <img [src]="fullHeart" alt="Coração vazio">
+  <img *ngFor="let heart of hearts" [src]="heart.showHeart">
 </div>
