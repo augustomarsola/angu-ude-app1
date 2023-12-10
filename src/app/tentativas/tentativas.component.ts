@@ -5,5 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './tentativas.component.html',
 })
 export class TentativasComponent {
-
+  public emptyHeart = '../assets/empty-heart.svg';
+  public fullHeart = '../assets/full-heart.svg';
 }
