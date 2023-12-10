@@ -5,13 +5,13 @@
   </div>
   <div>
     <h6 class="font-medium mb-2">{{ instruction }}</h6>
-    <p class="mb-3">{{ prases[0].fraseEn }}</p>
+    <p class="mb-3">{{ praseRound.fraseEn }}</p>
     <mat-form-field class="w-full">
       <mat-label>Resposta</mat-label>
       <textarea matInput (input)="updateAnswer($event)"></textarea>
     </mat-form-field>
   </div>
   <div class="text-right">
-    <button mat-raised-button color="primary">Verificar</button>
+    <button mat-raised-button color="primary" (click)="checkAnswer()">Verificar</button>
   </div>
 </main>
