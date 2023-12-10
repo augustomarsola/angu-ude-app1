@@ -2,9 +2,9 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-progresso',
-  templateUrl: './progresso.component.html',
+  templateUrl: './progress.component.html',
 })
-export class ProgressoComponent {
+export class ProgressComponent {
   @Input()
   public progress: number = 0;
 }

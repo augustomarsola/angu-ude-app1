@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
-import { Frase } from '../shared/frase.model';
-import { FRASES } from './frases-mock';
+import { Phrase } from '../shared/phrase.model';
+import { PHRASES } from './frases-mock';
 
 @Component({
   selector: 'app-painel',
-  templateUrl: './painel.component.html',
+  templateUrl: './panel.component.html',
 })
-export class PainelComponent {
-  public prases: Frase[] = FRASES;
+export class PanelComponent {
+  public phrases: Phrase[] = PHRASES;
   public instruction: string = 'Traduza a frase:';
   public answer: string = '';
 
   public round: number = 0;
-  public praseRound: Frase = {} as Frase;
+  public phraseRound: Phrase = {} as Phrase;
 
   public progress: number = 0;
 
   constructor() {
-    this.praseRound = this.prases[this.round];
+    this.phraseRound = this.phrases[this.round];
   }
 
   public updateAnswer(answer: Event): void {
@@ -25,7 +25,7 @@ export class PainelComponent {
   }
 
   public checkAnswer(): void {
-    if (this.answer === this.praseRound.frasePt) {
+    if (this.answer === this.phraseRound.phrasePt) {
       alert('Acertou!');
       this.updateRound();
     } else {
@@ -35,8 +35,8 @@ export class PainelComponent {
 
   public updateRound(): void {
     this.round++;
-    this.praseRound = this.prases[this.round];
-    this.progress = this.progress + (100 / this.prases.length);
+    this.phraseRound = this.phrases[this.round];
+    this.progress = this.progress + (100 / this.phrases.length);
     this.answer = '';
   }
 }
