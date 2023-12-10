@@ -14,6 +14,8 @@ export class PainelComponent {
   public round: number = 0;
   public praseRound: Frase = {} as Frase;
 
+  public progress: number = 0;
+
   constructor() {
     this.praseRound = this.prases[this.round];
   }
@@ -27,6 +29,7 @@ export class PainelComponent {
       alert('Acertou!');
       this.round++;
       this.praseRound = this.prases[this.round];
+      this.progress = this.progress + (100 / this.prases.length);
     } else {
       alert('Errou!');
     }
