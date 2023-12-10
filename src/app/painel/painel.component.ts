@@ -27,11 +27,16 @@ export class PainelComponent {
   public checkAnswer(): void {
     if (this.answer === this.praseRound.frasePt) {
       alert('Acertou!');
-      this.round++;
-      this.praseRound = this.prases[this.round];
-      this.progress = this.progress + (100 / this.prases.length);
+      this.updateRound();
     } else {
       alert('Errou!');
     }
+  }
+
+  public updateRound(): void {
+    this.round++;
+    this.praseRound = this.prases[this.round];
+    this.progress = this.progress + (100 / this.prases.length);
+    this.answer = '';
   }
 }
